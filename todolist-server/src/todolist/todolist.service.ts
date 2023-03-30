@@ -13,21 +13,12 @@ export class TodoListService {
     private readonly todolistRepository: Repository<TodoListEntity>,
   ) {}
 
-  // 创建文章
+  // 创建一条Todo
   async create(post: Partial<TodoListEntity>): Promise<TodoListEntity> {
-    // const { title } = post;
-    // if (!title) {
-    //   throw new HttpException('缺少文章标题', 401);
-    // }
-    // const doc = await this.postsRepository.findOne({ where: { title } });
-    // if (doc) {
-    //   throw new HttpException('文章已存在', 401);
-    // }
-    console.log(post);
     return await this.todolistRepository.save(post);
   }
 
-  // 获取文章列表
+  // 获取全部Todo
   async findAll(query): Promise<TodoListRo> {
     const qb = await getRepository(TodoListEntity).createQueryBuilder('post');
     qb.where('1 = 1');

@@ -23,7 +23,6 @@ export class TodoListController {
   @ApiOperation({ summary: '创建Todo' })
   @Post()
   async create(@Body() post: CreateTodoDto) {
-    console.log(post, 'post');
     return await this.todoListService.create(post);
   }
 
