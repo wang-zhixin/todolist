@@ -30,7 +30,11 @@
     "@nestjs/typeorm": "^9.0.1",
     "@nestjs/config": "^2.3.1",
     "mysql2": "^2.3.1",
-    "typeorm": "^0.2.39"
+    "typeorm": "^0.2.39",
+    "@nestjs/swagger": "^6.2.1",
+    "swagger-ui-express": "^4.6.2",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.0"
   },
   "devDependencies": {
     "@nestjs/cli": "^8.0.0",
